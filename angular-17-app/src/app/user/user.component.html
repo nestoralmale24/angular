@@ -1,0 +1,15 @@
+<section>
+    @if(isLoggedin){
+        <p>Bienvenido, {{username}}</p>
+        <img
+        (click)="greet()"
+        alt="photo" 
+        src="https://github.com/nestoralmale24.png"/>
+    }@else{
+        <p>Inicia sesion</p>
+        <button (click)="isLoggedin = true"> Log in</button>
+    }  
+
+    <app-games username="{{username}}"></app-games>
+</section>
+
